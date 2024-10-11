@@ -2,8 +2,8 @@
   <div>
     <Header />
     <div class="instrumentos">
-      <div v-for="instrumento in instrumentos">
-        <Instrumentos :foto="instrumento.foto" :nombre="instrumento.nombre" :precio="instrumento.precio" />
+      <div v-for="(instrumento,indice) in instrumentos">
+        <Instrumentos :foto="instrumento.foto" :nombre="instrumento.nombre" :precio="instrumento.precio" @eliminarInstrumento="instrumentos.splice(indice, 1)"/>
       </div>
     </div>
   </div>
