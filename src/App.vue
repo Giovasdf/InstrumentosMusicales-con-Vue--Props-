@@ -18,8 +18,15 @@
     </Card>
 
 
-
-
+    <div>
+      <p>----------------------</p>
+      <h3>Componentes Dinamicos</h3>
+      <button @click="componenteARenderizar = 'Letras' ">Letras</button>
+      <button @click="componenteARenderizar = 'Numeros' ">Numeros</button>
+      <div>
+        <component :is="componenteARenderizar"/>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -27,13 +34,16 @@
 import Header from './components/Header.vue'
 import Instrumentos from './components/Instrumentos.vue'
 import Card from './components/Card.vue'
-
+import Letras from './components/Letras.vue'
+import Numeros from './components/Numeros.vue'
 
 export default {
   components: {
     Header,
     Instrumentos,
     Card,
+    Letras,
+    Numeros
   },
   data() {
     return {
@@ -54,6 +64,7 @@ export default {
           precio: "$210.000",
         },
       ],
+      componenteARenderizar: "Letras",
     }
   },
 }
