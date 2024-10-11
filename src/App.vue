@@ -3,7 +3,15 @@
     <Header />
     <div class="instrumentos">
       <div v-for="(instrumento,indice) in instrumentos">
-        <Instrumentos :foto="instrumento.foto" :nombre="instrumento.nombre" :precio="instrumento.precio" @eliminarInstrumento="instrumentos.splice(indice, 1)"/>
+        <Instrumentos :foto="instrumento.foto" :nombre="instrumento.nombre" :precio="instrumento.precio" @eliminarInstrumento="instrumentos.splice(indice, 1)">
+          
+          <button>Comprar</button>
+        </Instrumentos>
+
+         <!-- <Instrumentos/> -->
+          <!-- <Instrumentos></Instrumentos> -->
+
+      
       </div>
     </div>
   </div>

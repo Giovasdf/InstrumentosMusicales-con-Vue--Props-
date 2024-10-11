@@ -3,7 +3,10 @@
         <div :style="{ backgroundImage: `url(${foto})` }" class="avatar"></div>
         <h2>{{ nombre }}</h2>
         <p>{{ precio }}</p>
-        <button @click="$emit('eliminarInstrumento')">Eliminar</button>  
+        <button @click="$emit('eliminarInstrumento')">Eliminar</button>
+        
+        <!-- <button>Comprar</button> -->
+         <slot/>
     </div>
 </template>
 
