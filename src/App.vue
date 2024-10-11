@@ -2,29 +2,38 @@
   <div>
     <Header />
     <div class="instrumentos">
-      <div v-for="(instrumento,indice) in instrumentos">
-        <Instrumentos :foto="instrumento.foto" :nombre="instrumento.nombre" :precio="instrumento.precio" @eliminarInstrumento="instrumentos.splice(indice, 1)">
-          
+      <div v-for="(instrumento, indice) in instrumentos">
+        <Instrumentos :foto="instrumento.foto" :nombre="instrumento.nombre" :precio="instrumento.precio"
+          @eliminarInstrumento="instrumentos.splice(indice, 1)">
+
           <button>Comprar</button>
         </Instrumentos>
 
-         <!-- <Instrumentos/> -->
-          <!-- <Instrumentos></Instrumentos> -->
-
-      
       </div>
     </div>
+    <Card :imgSrc="'http://cartodb.github.io/labs_vuejs_intro/src/common/vue_banner.jpg'">
+      <h3>Title</h3>
+      <p>Description</p>
+      <button>Ver más</button>
+    </Card>
+
+
+
+
   </div>
 </template>
 
 <script>
 import Header from './components/Header.vue'
 import Instrumentos from './components/Instrumentos.vue'
+import Card from './components/Card.vue'
+
 
 export default {
   components: {
     Header,
-    Instrumentos
+    Instrumentos,
+    Card,
   },
   data() {
     return {
@@ -44,13 +53,13 @@ export default {
           nombre: "Teclado Casio",
           precio: "$210.000",
         },
-      ]
+      ],
     }
   },
 }
 </script>
 
-<style>
+<style scoped>
 .instrumentos {
   width: 80%;
   margin: 30px auto;
