@@ -1,5 +1,7 @@
 <template>
   <div>
+    <Navbar/>
+
     <Header />
     <div class="instrumentos">
       <div v-for="(instrumento, indice) in instrumentos">
@@ -36,14 +38,15 @@ import Instrumentos from './components/Instrumentos.vue'
 import Card from './components/Card.vue'
 import Letras from './components/Letras.vue'
 import Numeros from './components/Numeros.vue'
-
+import Navbar from './components/Navbar/Navbar.vue'
 export default {
   components: {
     Header,
     Instrumentos,
     Card,
     Letras,
-    Numeros
+    Numeros,
+    Navbar
   },
   data() {
     return {
